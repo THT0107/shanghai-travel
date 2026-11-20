@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SHANGHAI GUIDE · 上海旅行指南 / 상하이 여행 가이드 - 도시 여행자를 위한 트렌디한 바이링궐(한·중) 감성 가이드북">
+  <meta name="author" content="Shanghai Travel Guide Project">
+  <title>SHANGHAI GUIDE · 上海旅行指南 / 상하이 여행 가이드</title>
+
+  <!-- Google Fonts: Playfair Display for editorial elegance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Header & Navigation
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="SHANGHAI GUIDE Homepage">
+        <span class="logo-main">
+          SHANGHAI GUIDE<span class="logo-dot"></span>
+        </span>
+        <span class="logo-sub">上海旅行指南 / 상하이 여행 가이드</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">
+          <span>首页</span>
+          <span class="sub-text">홈</span>
+        </a>
+        <a href="#attractions" class="nav-link">
+          <span>景点</span>
+          <span class="sub-text">관광명소</span>
+        </a>
+        <a href="#food" class="nav-link">
+          <span>美食</span>
+          <span class="sub-text">특색맛집</span>
+        </a>
+        <a href="#transport" class="nav-link">
+          <span>交通</span>
+          <span class="sub-text">교통안내</span>
+        </a>
+        <a href="#itineraries" class="nav-link">
+          <span>行程</span>
+          <span class="sub-text">추천일정</span>
+        </a>
+        <a href="#favorites" class="nav-link">
+          <span>收藏</span>
+          <span class="sub-text">즐겨찾기</span>
+        </a>
+      </nav>
+
+      <!-- Header Actions: Favorites Drawer Trigger & Mobile Hamburger -->
+      <div class="header-actions">
+        <button id="openFavoritesDrawerBtn" class="favorites-btn" aria-label="查看我的收藏 / 내 즐겨찾기 열기">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span>收藏 / 즐겨찾기</span>
+          <span class="fav-counter-badge" id="headerFavBadge">0</span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="切换导航菜单 / 메뉴 토글" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Section 1: Hero (Home)
+       ========================================================================== -->
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content">
+          <div class="hero-editorial-meta">
+            <span></span>
+            MAGAZINE EDITION · 上海漫游特辑 / 상하이 여행 가이드
+          </div>
+          <h1 class="hero-title editorial-title">
+            DISCOVER<br>
+            <span class="title-accent">SHANGHAI</span><br>
+            遇见魔都 / 상하이를 만나다
+          </h1>
+          <div class="hero-bilingual-subtitle">
+            <p class="hero-lead-cn">
+              百年万国建筑与璀璨摩天森林隔江相映，梧桐弄堂深处的传统烟火与当代先锋潮流在此从容共生。
+            </p>
+            <p class="hero-lead-kr">
+              100년 역사의 만국 건축물과 미래지향적 마천루가 황푸강을 사이에 두고 마주보는 도시. 유서 깊은 골목의 전통 미식과 트렌디한 감성이 살아 숨 쉬는 상하이의 모든 것을 담았습니다.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a href="#attractions" class="btn-primary">
+              <span>探索景点 / 명소 둘러보기</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#itineraries" class="btn-secondary">
+              <span>查看行程 / 추천 일정</span>
+            </a>
+          </div>
+
+          <!-- Hero Highlights Quick Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">800+<small style="font-size:0.6em; font-family:var(--font-sans)">km</small></span>
+              <span class="stat-label-cn">地铁运营里程</span>
+              <span class="stat-label-kr">세계 최대 메트로망</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+<small style="font-size:0.6em; font-family:var(--font-sans)">yrs</small></span>
+              <span class="stat-label-cn">外滩历史建筑群</span>
+              <span class="stat-label-kr">백년 만국 건축 박람회</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24<small style="font-size:0.6em; font-family:var(--font-sans)">h</small></span>
+              <span class="stat-label-cn">不夜都会活力</span>
+              <span class="stat-label-kr">잠들지 않는 미식·야경</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Column (Editorial Magazine Card) -->
+        <div class="hero-visual">
+          <div class="hero-main-card">
+            <span class="hero-overlay-tag">SHANGHAI AT DUSK · 外滩夜景 / 와이탄 황혼</span>
+            <img class="hero-main-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Lujiazui_skyline_by_night_from_Bund%2C_fully_illuminated.jpg/1280px-Lujiazui_skyline_by_night_from_Bund%2C_fully_illuminated.jpg" alt="上海外滩与陆家嘴天际线璀璨夜景 / 상하이 와이탄에서 바라본 루자쭈이 황푸강 야경" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'1000\' viewBox=\'0 0 800 1000\' fill=\'%23141517\'><rect width=\'800\' height=\'1000\' fill=\'%23141517\'/><text x=\'400\' y=\'500\' fill=\'%23E63920\' font-size=\'36\' font-weight=\'bold\' text-anchor=\'middle\'>SHANGHAI SKYLINE</text></svg>';" />
+          </div>
+          <div class="hero-caption-card">
+            <p class="hero-caption-quote">“一座海纳百川、古今折叠的传奇都会。”</p>
+            <p class="hero-caption-sub">과거와 미래가 공존하는 마도(魔都) 상하이의 매력을 발견해 보세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Curated Editorial Pillars (Home Highlights) -->
+    <section class="curated-highlights">
+      <div class="container">
+        <div class="curated-grid">
+          <div class="curated-card">
+            <span class="curated-number">01</span>
+            <h3 class="curated-title-cn">城市地标 / 도시 랜드마크</h3>
+            <span class="curated-title-kr">Iconic Architectural Wonders</span>
+            <p class="curated-desc">外滩万国建筑群与东方明珠广播电视塔隔江辉映，勾勒出世界上最震撼的天际线风景。</p>
+          </div>
+          <div class="curated-card">
+            <span class="curated-number">02</span>
+            <h3 class="curated-title-cn">弄堂梧桐 / 골목과 플라타너스</h3>
+            <span class="curated-title-kr">Historic Concession & Alleys</span>
+            <p class="curated-desc">武康路与新天地石库门弄堂，梧桐浓荫掩映着名人故居与先锋独立咖啡馆。</p>
+          </div>
+          <div class="curated-card">
+            <span class="curated-number">03</span>
+            <h3 class="curated-title-cn">舌尖风味 / 상하이 미식 탐방</h3>
+            <span class="curated-title-kr">Authentic Shanghainese Tastes</span>
+            <p class="curated-desc">爆汁南翔小笼包、金黄生煎、开洋葱油拌面与浓油赤酱红烧肉，抚慰每位旅行者的味蕾。</p>
+          </div>
+          <div class="curated-card">
+            <span class="curated-number">04</span>
+            <h3 class="curated-title-cn">智能漫游 / 스마트 대중교통</h3>
+            <span class="curated-title-kr">Effortless Smart Transit</span>
+            <p class="curated-desc">全球最长地铁网络与高速磁浮列车，支持国际信用卡扫码乘车，通行无阻畅游全城。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 2: Attractions (景点 / 관광명소)
+         ========================================================================== -->
+    <section class="attractions-section" id="attractions">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-label">ATTRACTIONS & LANDMARKS · 城市名胜</div>
+          <h2 class="section-title">景点 / 관광명소</h2>
+          <p class="section-subtitle">
+            精选上海必访地标与历史文化圣地，支持多语言关键词搜索与分类筛选。点击心形按钮即可一键收藏至离线清单。<br>
+            <span style="font-size:0.9em; color:var(--color-text-subtle);">상하이의 필수 랜드마크와 역사·문화 명소를 탐색해 보세요. 마음에 드는 명소는 하트 버튼을 눌러 즐겨찾기에 담아두세요.</span>
+          </p>
+        </header>
+
+        <!-- Search & Category Filters Controls Bar -->
+        <div class="controls-bar">
+          <!-- Search Box -->
+          <div class="search-box-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="attractionSearchInput"
+              class="search-input"
+              placeholder="搜索景点、地标名称或交通路线 / 명소 이름이나 지하철 노선을 검색하세요..."
+              aria-label="搜索景点 / 관광명소 검색"
+            />
+            <button id="attractionSearchClear" class="search-clear-btn" aria-label="清除搜索 / 검색어 지우기">✕</button>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="filter-pills-row" id="attractionPills">
+            <button class="filter-pill active" data-category="all">
+              <span>全部</span>
+              <span class="pill-sub">전체</span>
+            </button>
+            <button class="filter-pill" data-category="landmark">
+              <span>城市地标</span>
+              <span class="pill-sub">도시 랜드마크</span>
+            </button>
+            <button class="filter-pill" data-category="history">
+              <span>历史人文</span>
+              <span class="pill-sub">역사·문화</span>
+            </button>
+            <button class="filter-pill" data-category="trend">
+              <span>潮流街区</span>
+              <span class="pill-sub">트렌디 거리</span>
+            </button>
+            <button class="filter-pill" data-category="leisure">
+              <span>休闲娱乐</span>
+              <span class="pill-sub">테마파크·레저</span>
+            </button>
+          </div>
+
+          <!-- Feedback Status -->
+          <div class="results-feedback">
+            <span>找到 <strong class="results-count-number" id="attractionsCount">0</strong> 个景点 / 검색 결과</span>
+            <span style="font-size:0.75rem; color:#8C8E94">* 票价与开放时间随季节变动，请以官方公告为准</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Attractions Grid -->
+        <div class="attractions-grid" id="attractionsGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 3: Food (美食 / 특색맛집)
+         ========================================================================== -->
+    <section class="food-section" id="food">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-label">GASTRONOMY GUIDE · 舌尖上海</div>
+          <h2 class="section-title">美食 / 특색맛집</h2>
+          <p class="section-subtitle">
+            探寻“浓油赤酱、咸甜适口”的本帮风味与弄堂市井点心。从百年传承的南翔小笼到酥脆多汁的生煎包，每一道都是必尝经典。<br>
+            <span style="font-size:0.9em; color:var(--color-text-subtle);">육즙 가득한 소롱포부터 바삭한 성지엔바오, 고소한 파기름 비빔면까지 상하이의 진정한 로컬 미식을 소개합니다.</span>
+          </p>
+        </header>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls-bar">
+          <div class="search-box-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="foodSearchInput"
+              class="search-input"
+              placeholder="搜索上海特色美食、餐厅或风味 / 상하이 미식 메뉴나 맛집을 검색하세요..."
+              aria-label="搜索美食 / 맛집 검색"
+            />
+            <button id="foodSearchClear" class="search-clear-btn" aria-label="清除搜索 / 검색어 지우기">✕</button>
+          </div>
+
+          <div class="filter-pills-row" id="foodPills">
+            <button class="filter-pill active" data-category="all">
+              <span>全部</span>
+              <span class="pill-sub">전체</span>
+            </button>
+            <button class="filter-pill" data-category="dimsum">
+              <span>经典点心</span>
+              <span class="pill-sub">전통 만두·딤섬</span>
+            </button>
+            <button class="filter-pill" data-category="noodles">
+              <span>面食主食</span>
+              <span class="pill-sub">면류 및 식사</span>
+            </button>
+            <button class="filter-pill" data-category="cuisine">
+              <span>本帮名菜</span>
+              <span class="pill-sub">상하이 전통 요리</span>
+            </button>
+            <button class="filter-pill" data-category="snacks">
+              <span>街头甜点</span>
+              <span class="pill-sub">길거리 간식·디저트</span>
+            </button>
+          </div>
+
+          <div class="results-feedback">
+            <span>找到 <strong class="results-count-number" id="foodCount">0</strong> 款经典美味 / 검색 결과</span>
+            <span style="font-size:0.75rem; color:#8C8E94">* 餐厅营业时间与人均消费请以各商户现场为准</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Food Grid -->
+        <div class="food-grid" id="foodGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 4: Transport (交通指南 / 교통 가이드)
+         ========================================================================== -->
+    <section class="transport-section" id="transport">
+      <div class="container transport-container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-label">GETTING AROUND · 便捷出行</div>
+          <h2 class="section-title">交通指南 / 교통 가이드</h2>
+          <p class="section-subtitle">
+            上海拥有世界上最发达的城市立体交通网络。了解地铁干线、机场交通枢纽及实用的移动支付乘车指南，出行畅行无忧。<br>
+            <span style="font-size:0.9em; color:var(--color-text-subtle);">세계 최장 지하철 노선망과 자기부상열차, 스마트폰 간편결제 팁까지 상하이 여행 필수 교통 정보를 한눈에 확인하세요.</span>
+          </p>
+        </header>
+
+        <!-- 3 Primary Transport Pillars -->
+        <div class="transport-main-grid">
+          <!-- Card 1: Metro -->
+          <article class="transport-card">
+            <div class="transport-card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Shanghai_Metro_Line_10_train_head_end.jpg/960px-Shanghai_Metro_Line_10_train_head_end.jpg" alt="上海地铁10号线列车与站台 / 상하이 메트로 10호선 전동차" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\' viewBox=\'0 0 800 500\' fill=\'%231E2128\'><rect width=\'800\' height=\'500\' fill=\'%231E2128\'/><text x=\'400\' y=\'260\' fill=\'%23133E87\' font-size=\'28\' font-weight=\'bold\' text-anchor=\'middle\'>SHANGHAI METRO</text></svg>';" />
+            </div>
+            <div class="transport-header-group">
+              <div class="transport-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="3" width="16" height="16" rx="2"></rect>
+                  <path d="M4 11h16"></path>
+                  <path d="M12 3v8"></path>
+                  <path d="m8 19-2 3"></path>
+                  <path d="m16 19 2 3"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="transport-card-title-cn" style="margin-bottom:0;">上海地铁 / 상하이 메트로</h3>
+                <div class="transport-card-title-kr" style="margin-bottom:0;">World's Largest Metro Network</div>
+              </div>
+            </div>
+            <div class="transport-points">
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>核心动脉线路 / 핵심 노선:</strong><br>
+                  2号线贯通浦东与虹桥两大机场及市中心人民广场；10号线直达新天地与豫园；14号线全自动无人驾驶横贯核心商务区。
+                  <div class="metro-lines-badges">
+                    <span class="metro-badge line-2">2号线 / 2호선</span>
+                    <span class="metro-badge line-10">10号线 / 10호선</span>
+                    <span class="metro-badge line-14">14号线 / 14호선</span>
+                  </div>
+                </div>
+              </div>
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>乘车支付方式 / 탑승 결제:</strong><br>
+                  使用支付宝 (Alipay) 或微信 (WeChat) 绑定境外信用卡，开通“出行码”扫码直接进站过闸，或在地铁站购买一日票/三日票。
+                </div>
+              </div>
+            </div>
+            <div class="verification-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>* 各车站首末班车运营时间与换乘通道维护请以现场告示或官方App为准</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Airports & Rail -->
+          <article class="transport-card">
+            <div class="transport-card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg/960px-A_maglev_train_coming_out%2C_Pudong_International_Airport%2C_Shanghai.jpg" alt="浦东国际机场上海磁浮高速列车 / 상하이 푸둥공항 자기부상열차 (Maglev)" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\' viewBox=\'0 0 800 500\' fill=\'%231E2128\'><rect width=\'800\' height=\'500\' fill=\'%231E2128\'/><text x=\'400\' y=\'260\' fill=\'%23E63920\' font-size=\'28\' font-weight=\'bold\' text-anchor=\'middle\'>SHANGHAI MAGLEV</text></svg>';" />
+            </div>
+            <div class="transport-header-group">
+              <div class="transport-icon-box" style="background:var(--color-crimson-soft); color:var(--color-crimson);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="transport-card-title-cn" style="margin-bottom:0;">机场与高铁 / 공항 및 고속철도</h3>
+                <div class="transport-card-title-kr" style="margin-bottom:0;">Airport & High-Speed Transit</div>
+              </div>
+            </div>
+            <div class="transport-points">
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>浦东国际机场 (PVG) / 푸둥 공항:</strong><br>
+                  可乘坐<strong>上海磁浮列车 (Maglev)</strong>，最高时速达300-430km/h，仅需约8分钟即可抵达龙阳路地铁站换乘2/7/16/18号线。
+                  <div class="metro-lines-badges">
+                    <span class="metro-badge line-maglev">磁浮列车 / 자기부상열차 (8분)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>虹桥综合枢纽 (SHA) / 훙차오 허브:</strong><br>
+                  集合虹桥国际机场与高铁虹桥火车站，无缝衔接地铁2号线、10号线及17号线，20分钟可抵市区核心。
+                </div>
+              </div>
+            </div>
+            <div class="verification-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>* 凭当日机票购买磁浮车票可享优惠，运行班次及票价请以现场售票处为准</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Ride-Hailing & Taxi -->
+          <article class="transport-card">
+            <div class="transport-card-media">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/%E5%A4%96%E7%81%98_The_Bund_%286057926946%29.jpg/960px-%E5%A4%96%E7%81%98_The_Bund_%286057926946%29.jpg" alt="黄浦江轮渡水上航线与外滩视角 / 황푸강 페리 유람선 시점" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\' viewBox=\'0 0 800 500\' fill=\'%231E2128\'><rect width=\'800\' height=\'500\' fill=\'%231E2128\'/><text x=\'400\' y=\'260\' fill=\'%23D97706\' font-size=\'28\' font-weight=\'bold\' text-anchor=\'middle\'>HUANGPU RIVER FERRY</text></svg>';" />
+            </div>
+            <div class="transport-header-group">
+              <div class="transport-icon-box" style="background:var(--color-amber-soft); color:var(--color-amber);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                  <circle cx="7" cy="17" r="2"></circle>
+                  <path d="M9 17h6"></path>
+                  <circle cx="17" cy="17" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="transport-card-title-cn" style="margin-bottom:0;">网约车与轮渡 / 택시·페리</h3>
+                <div class="transport-card-title-kr" style="margin-bottom:0;">Didi Hailing & Huangpu River Ferry</div>
+              </div>
+            </div>
+            <div class="transport-points">
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>滴滴网约车 (Didi Chuxing):</strong><br>
+                  支付宝内内置“滴滴出行”小程序，支持英文双语界面及实时消息自动翻译，下车自动扣款免找零，安全透明。
+                </div>
+              </div>
+              <div class="point-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong>黄浦江过江轮渡 (Ferry):</strong><br>
+                  票价仅需2元，从金陵东路渡口往返东昌路渡口，吹着江风赏浦江两岸风光，是性价比极高的魔都独特体验。
+                </div>
+              </div>
+            </div>
+            <div class="verification-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>* 轮渡末班船时间及雨雪大雾天气停航信息需留意码头即时通知</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Practical Travel Tips Strip -->
+        <div class="practical-tips-strip">
+          <div class="practical-strip-header">
+            <h3 style="font-size:1.15rem; font-weight:800; color:var(--color-text-main); margin-bottom:4px;">
+              实用出行准备清单 / 실전 여행 필수 체크리스트
+            </h3>
+            <p style="font-size:0.85rem; color:var(--color-text-muted);">
+              行前必备工具与小贴士，助力轻松畅游上海 / 떠나기 전 챙겨야 할 모바일 앱과 현지 팁
+            </p>
+          </div>
+          <div class="practical-grid">
+            <div class="practical-box">
+              <div class="practical-box-title-cn">01 移动支付 / 모바일 결제</div>
+              <div class="practical-box-title-kr">Alipay & WeChat Pay</div>
+              <p class="practical-box-desc">
+                无需国内银行卡，直接下载支付宝绑定境外Visa/Mastercard信用卡即可无障碍扫码支付商户、餐饮及公共交通。
+              </p>
+            </div>
+            <div class="practical-box">
+              <div class="practical-box-title-kr">02 手机网络 / 로밍·eSIM</div>
+              <div class="practical-box-title-cn">eSIM & Global Roaming</div>
+              <p class="practical-box-desc">
+                提前购买支持漫游的国际eSIM或开通国际漫游服务，可正常顺畅访问常用国际社交应用及地图导航。
+              </p>
+            </div>
+            <div class="practical-box">
+              <div class="practical-box-title-cn">03 地图导航 / 지도 내비게이션</div>
+              <div class="practical-box-title-kr">Amap & Apple Maps</div>
+              <p class="practical-box-desc">
+                高德地图（Amap）与苹果自带Apple Maps在上海定位极准，提供精确到几分钟的地铁换乘方案与实时公交。
+              </p>
+            </div>
+            <div class="practical-box">
+              <div class="practical-box-title-cn">04 电源插座 / 전원 플러그</div>
+              <div class="practical-box-title-kr">Voltage & Plugs (220V)</div>
+              <p class="practical-box-desc">
+                电压为220V/50Hz。多数现代酒店配有国际通用多功能插座及USB充电口，双脚扁头或圆头插头多可兼容。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 5: Itineraries (推荐行程 / 추천 일정)
+         ========================================================================== -->
+    <section class="itineraries-section" id="itineraries">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header" style="text-align: center;">
+          <div class="section-label" style="justify-content: center;">SUGGESTED ROUTES · 漫游路线</div>
+          <h2 class="section-title">推荐行程 / 추천 일정</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            专为不同停留时间的旅行者设计的精选漫游路线。按时序规划，兼顾经典地标与潮流小资体验。<br>
+            <span style="font-size:0.9em; color:var(--color-text-subtle);">여행 일정에 맞춘 맞춤형 코스입니다. 1일 핵심 투어부터 3일 완전 정복까지 최적의 동선으로 안내합니다.</span>
+          </p>
+        </header>
+
+        <!-- Itinerary Route Switcher Tabs -->
+        <div class="itinerary-tabs-nav" id="itineraryTabsNav">
+          <button class="itinerary-tab-btn active" data-tab="tabDay1">
+            <span>1日精华游</span>
+            <span class="tab-sub">1일 핵심 코스 (Classic Highlights)</span>
+          </button>
+          <button class="itinerary-tab-btn" data-tab="tabDay2">
+            <span>2日深度游</span>
+            <span class="tab-sub">2일 클래식 & 트렌드 (Modern & Heritage)</span>
+          </button>
+          <button class="itinerary-tab-btn" data-tab="tabDay3">
+            <span>3日全景游</span>
+            <span class="tab-sub">3일 완전 정복 (Ultimate Shanghai)</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: One-Day Tour -->
+        <div class="itinerary-content-card active" id="tabDay1">
+          <div class="itinerary-overview-header">
+            <div>
+              <h3 style="font-size:1.4rem; font-weight:800; color:var(--color-text-main); margin-bottom:4px;">
+                1日经典地标打卡路线 / 1일 핵심 랜드마크 코스
+              </h3>
+              <p style="font-size:0.88rem; color:var(--color-text-muted);">
+                适合过境中转或首次到访上海的紧凑高效行程 / 상하이의 필수 상징을 하루 만에 둘러보는 핵심 코스
+              </p>
+            </div>
+            <div class="itinerary-badge-row">
+              <span class="badge badge-crimson">节奏：紧凑高效 / 알찬 코스</span>
+              <span class="badge badge-blue">推荐交通：地铁10/2号线 + 渡轮</span>
+            </div>
+          </div>
+
+          <div class="timeline-list">
+            <!-- Morning -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">09:00 - 12:00 · 上午 / 오전</span>
+              <h4 class="timeline-title-cn">豫园古典园林漫步 ➔ 品尝南翔小笼包</h4>
+              <div class="timeline-title-kr">예원 정원 산책 및 전통 소롱포 미식 브런치</div>
+              <p class="timeline-details">
+                清晨人流较少时漫步明代江南名园豫园，欣赏回廊砖雕与锦鲤池塘。出园后走过九曲桥，在老字号南翔馒头店品尝热气腾腾的鲜肉小笼与蟹粉小笼包。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">📍 豫园站 7号口</span>
+                <span class="timeline-chip">🥟 推荐：南翔小笼包</span>
+                <span class="timeline-chip">⏱ 建议停留：2.5小时</span>
+              </div>
+            </div>
+
+            <!-- Afternoon -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">13:30 - 17:30 · 下午 / 오후</span>
+              <h4 class="timeline-title-cn">南京东路步行街 ➔ 外滩万国建筑博览群</h4>
+              <div class="timeline-title-kr">난징둥루 보행가 쇼핑 & 와이탄 건축물 산책</div>
+              <p class="timeline-details">
+                乘坐地铁至南京东路，沿着百年繁华步行街漫步至外滩江堤。眺望隔江相望的陆家嘴“三件套”摩天大楼，随后乘坐2元黄浦江渡轮前往浦东东昌路渡口。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">📍 南京东路站</span>
+                <span class="timeline-chip">🚢 体验：金陵东路渡口乘轮渡 (2元)</span>
+                <span class="timeline-chip">📸 绝佳拍照点：和平饭店江堤</span>
+              </div>
+            </div>
+
+            <!-- Evening -->
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">18:00 - 21:30 · 晚上 / 저녁</span>
+              <h4 class="timeline-title-cn">陆家嘴金融城 ➔ 东方明珠观景台与震撼夜景</h4>
+              <div class="timeline-title-kr">루자쭈이 금융가 & 동방명주 스카이워크 야경 감상</div>
+              <p class="timeline-details">
+                登上东方明珠259米悬空玻璃观光廊，俯瞰浦江两岸万家灯火。晚餐可在正大广场或国金中心品尝本帮红烧肉与生煎包，为充实的一天画上圆满句号。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">📍 陆家嘴站 2号口</span>
+                <span class="timeline-chip">🌃 夜景黄金时段：19:00 - 21:00</span>
+                <span class="timeline-chip">🍲 晚餐：本帮传统菜</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Two-Day Tour -->
+        <div class="itinerary-content-card" id="tabDay2">
+          <div class="itinerary-overview-header">
+            <div>
+              <h3 style="font-size:1.4rem; font-weight:800; color:var(--color-text-main); margin-bottom:4px;">
+                2日经典与潮流漫步路线 / 2일 클래식 & 트렌드 코스
+              </h3>
+              <p style="font-size:0.88rem; color:var(--color-text-muted);">
+                将经典地标与法租界梧桐小资街区完美融合，体验现代海派悠闲生活 / 감성적인 카페 거리와 핵심 명소를 모두 누리는 추천 코스
+              </p>
+            </div>
+            <div class="itinerary-badge-row">
+              <span class="badge badge-crimson">节奏：舒缓惬意 / 여유로운 감성</span>
+              <span class="badge badge-amber">推荐：Citywalk 城市漫步</span>
+            </div>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 1 · 第一天 / 1일차</span>
+              <h4 class="timeline-title-cn">外滩 ➔ 豫园 ➔ 陆家嘴天际线 (经典全览)</h4>
+              <div class="timeline-title-kr">와이탄 + 예원 + 루자쭈이 마천루 랜드마크 완전 정복</div>
+              <p class="timeline-details">
+                参考1日游路线，全景打卡魔都最具代表性的外滩与陆家嘴，品尝地道生煎包与南翔小笼，感受百年万国建筑的璀璨灯火。
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 2 上午 / 2일차 오전 (09:30 - 12:30)</span>
+              <h4 class="timeline-title-cn">武康路梧桐区漫步 ➔ 打卡武康大楼 ➔ 独立精品咖啡</h4>
+              <div class="timeline-title-kr">우캉루 플라타너스 산책 & 우캉맨션 포토존 & 스페셜티 커피</div>
+              <p class="timeline-details">
+                漫步在法国梧桐掩映的武康路与安福路，在标志性武康大楼前拍摄绝美街景。造访路边的买手店、烘焙面包坊与精品咖啡店，体验上海独有的海派慢调生活。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">📍 交通大学站 7号口</span>
+                <span class="timeline-chip">☕ 推荐：梧桐树下露天咖啡</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 2 下午至晚间 / 2일차 오후~저녁 (14:00 - 21:00)</span>
+              <h4 class="timeline-title-cn">新天地石库门建筑 ➔ 静安寺金顶璀璨夜色</h4>
+              <div class="timeline-title-kr">신천지 스쿠먼 골목 & 정안사 황금빛 야경 디너</div>
+              <p class="timeline-details">
+                前往新天地感受传统石库门里弄与时尚商区的精妙结合。傍晚乘坐地铁前往静安寺，看金碧辉煌的千年古刹在现代玻璃幕墙摩天大楼中熠熠生辉，享用本帮红烧肉与蟹黄面晚餐。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">📍 新天地站 ➔ 静安寺站</span>
+                <span class="timeline-chip">🍜 晚餐：现拆蟹粉拌面</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Three-Day Tour -->
+        <div class="itinerary-content-card" id="tabDay3">
+          <div class="itinerary-overview-header">
+            <div>
+              <h3 style="font-size:1.4rem; font-weight:800; color:var(--color-text-main); margin-bottom:4px;">
+                3日全景深度探索路线 / 3일 완전 정복 코스
+              </h3>
+              <p style="font-size:0.88rem; color:var(--color-text-muted);">
+                全面涵盖经典地标、文博历史、街区漫游与主题乐园/江南水乡二选一 / 가족, 연인, 친구 누구와도 완벽한 3일 풀코스
+              </p>
+            </div>
+            <div class="itinerary-badge-row">
+              <span class="badge badge-crimson">深度：全景覆盖 / 완벽 정복</span>
+              <span class="badge badge-green">自由选择：迪士尼或水乡</span>
+            </div>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 1 · 历史与天际线 / 1일차</span>
+              <h4 class="timeline-title-cn">豫园 ➔ 外滩万国建筑群 ➔ 陆家嘴俯瞰夜景</h4>
+              <div class="timeline-title-kr">예원 정원 ➔ 난징둥루 ➔ 와이탄 ➔ 루자쭈이 야경</div>
+              <p class="timeline-details">
+                经典必访路线，沉浸式体验“东方明珠”与黄浦江游船，品味南翔小笼与排骨年糕。
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 2 · 艺术历史与潮流街区 / 2일차</span>
+              <h4 class="timeline-title-cn">上海博物馆 ➔ 武康路/安福路 ➔ 新天地石库门夜色</h4>
+              <div class="timeline-title-kr">상하이 박물관 고대 국보전 ➔ 우캉루 & 신천지 거리 투어</div>
+              <p class="timeline-details">
+                上午在上海博物馆饱览古代青铜器与书画瑰宝，下午穿行于武康路梧桐树荫与特色小店，夜晚在新天地露天餐厅把酒言欢，品尝开洋葱油拌面与秘制红烧肉。
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-node"></div>
+              <span class="timeline-time-tag">DAY 3 · 梦想狂欢或江南水乡 (方案二选一) / 3일차 선택 코스</span>
+              <h4 class="timeline-title-cn">方案A：上海迪士尼乐园一日畅玩 / 方案B：朱家角水乡古镇漫游</h4>
+              <div class="timeline-title-kr">선택 A: 상하이 디즈니랜드 판타지 투어 / 선택 B: 주가각 수향마을 뱃놀이</div>
+              <p class="timeline-details">
+                <strong>方案A (适合家庭与乐园爱好者):</strong> 地铁11号线直达迪士尼，挑战创极速光轮与加勒比海盗，晚上在奇幻童话城堡前欣赏震撼烟花幻影秀。<br>
+                <strong>方案B (适合古镇文化爱好者):</strong> 地铁17号线直达朱家角古镇，漫步放生桥与北大街，乘坐乌篷小船体验“小桥流水人家”的纯正江南韵味。
+              </p>
+              <div class="timeline-chips">
+                <span class="timeline-chip">🎢 方案A：地铁11号线 迪士尼站</span>
+                <span class="timeline-chip">🚣 方案B：地铁17号线 朱家角站</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 6: Favorites (我的收藏 / 내 즐겨찾기)
+         ========================================================================== -->
+    <section class="favorites-section" id="favorites">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-label">SAVED PLACES · 个人定制清单</div>
+          <div class="favorites-header-bar">
+            <div>
+              <h2 class="section-title">我的收藏 / 내 즐겨찾기</h2>
+              <p class="section-subtitle">
+                您保存的景点与美食已自动持久化存储于浏览器中（localStorage），离线刷新不丢失。<br>
+                <span style="font-size:0.9em; color:var(--color-text-subtle);">저장한 명소와 맛집 목록입니다. 브라우저 로컬 저장소에 안전하게 보관되어 언제든 다시 확인할 수 있습니다.</span>
+              </p>
+            </div>
+            <div class="favorites-controls">
+              <button class="btn-clear-all" id="clearAllFavsBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                <span>清空收藏 / 전체 삭제</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Favorites Filter Row -->
+        <div class="controls-bar" style="margin-bottom: 24px; padding: 14px 20px;">
+          <div class="filter-pills-row" id="favoritesPills">
+            <button class="filter-pill active" data-filter="all">
+              <span>全部</span>
+              <span class="pill-sub">전체</span>
+            </button>
+            <button class="filter-pill" data-filter="attraction">
+              <span>仅景点</span>
+              <span class="pill-sub">명소만 보기</span>
+            </button>
+            <button class="filter-pill" data-filter="food">
+              <span>仅美食</span>
+              <span class="pill-sub">맛집만 보기</span>
+            </button>
+          </div>
+          <div class="results-feedback">
+            <span>当前已保存 <strong class="results-count-number" id="favoritesSectionCount">0</strong> 项 / 저장된 항목</span>
+          </div>
+        </div>
+
+        <!-- Empty State Message -->
+        <div class="favorites-empty-state" id="favoritesSectionEmpty">
+          <div class="empty-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="empty-title-cn">收藏夹目前是空的 / 즐겨찾기가 비어 있습니다</h3>
+          <div class="empty-title-kr">No Saved Places Yet</div>
+          <p class="empty-desc">
+            浏览上方的景点或美食卡片，点击右上角的爱心按钮，即可将您感兴趣的目的地收入此清单。<br>
+            명소 및 맛집 카드의 하트 버튼을 눌러 나만의 상하이 여행 위시리스트를 완성해 보세요.
+          </p>
+          <a href="#attractions" class="btn-primary" style="padding: 10px 24px; font-size: 0.88rem;">
+            <span>去发现景点 / 명소 둘러보기</span>
+          </a>
+        </div>
+
+        <!-- Dynamic Favorites Grid in Section -->
+        <div class="favorites-grid" id="favoritesSectionGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Slide-in Drawer: Quick Favorites Panel (Modal View)
+       ========================================================================== -->
+  <div class="fav-drawer-backdrop" id="favoritesBackdrop"></div>
+  <aside class="fav-drawer" id="favoritesDrawer" aria-label="收藏夹抽屉 / 즐겨찾기 서랍">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h3 class="drawer-title-cn">我的收藏清单</h3>
+        <span class="drawer-title-kr">내 즐겨찾기 목록 (<span class="fav-counter-badge" style="display:inline-flex;">0</span>)</span>
+      </div>
+      <button class="drawer-close-btn" id="closeFavoritesDrawerBtn" aria-label="关闭抽屉 / 닫기">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Empty message in drawer -->
+      <div id="drawerEmptyMsg" style="text-align:center; padding: 48px 16px; color:#5E6066; display:none;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C9C6BC" stroke-width="1.5" style="margin: 0 auto 12px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <p style="font-weight:700; color:#141517; margin-bottom:4px;">暂无收藏项目 / 저장된 항목이 없습니다</p>
+        <p style="font-size:0.8rem;">在卡片上点击爱心即可收藏 / 카드의 하트를 눌러보세요.</p>
+      </div>
+
+      <!-- Item list -->
+      <div class="drawer-items-list" id="drawerFavList">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <button class="btn-clear-all" id="drawerClearAllBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+        <span>全部清空 / 전체 삭제</span>
+      </button>
+      <a href="#favorites" class="btn-primary" style="padding: 8px 18px; font-size: 0.8rem;" onclick="document.getElementById('closeFavoritesDrawerBtn').click();">
+        <span>查看完整列表 / 전체 보기</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Toast Notification System Container (Bilingual Feedback)
+       ========================================================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand & Mission Column -->
+        <div>
+          <div class="footer-brand-title">
+            SHANGHAI GUIDE<span class="logo-dot"></span>
+          </div>
+          <p class="footer-desc">
+            城市探索者的中韩双语现代旅行特辑。融合前沿设计与实用旅行干货，带你领略海派都会的深邃魅力。<br>
+            <span style="font-size:0.82em; color:#7B7D84;">도시 탐험가를 위한 한·중 바이링궐 감성 여행 가이드북. 상하이의 역사와 트렌드를 가장 아름답게 안내합니다.</span>
+          </p>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div>
+          <h4 class="footer-col-title-cn">快捷导航 / 빠른 바로가기</h4>
+          <div class="footer-col-title-kr">Quick Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="#home" class="footer-link">首页 / 홈 (Home)</a></li>
+            <li><a href="#attractions" class="footer-link">景点 / 관광명소 (Attractions)</a></li>
+            <li><a href="#food" class="footer-link">美食 / 특색맛집 (Food Guide)</a></li>
+            <li><a href="#transport" class="footer-link">交通 / 교통안내 (Transport)</a></li>
+            <li><a href="#itineraries" class="footer-link">行程 / 추천일정 (Itineraries)</a></li>
+            <li><a href="#favorites" class="footer-link">收藏 / 내 즐겨찾기 (My Favorites)</a></li>
+          </ul>
+        </div>
+
+        <!-- Academic & Open Source Notes Column -->
+        <div>
+          <h4 class="footer-col-title-cn">项目信息 / 프로젝트 정보</h4>
+          <div class="footer-col-title-kr">University OSS Assignment</div>
+          <p class="footer-desc" style="font-size:0.82rem;">
+            <strong>Open Source Software Project</strong><br>
+            AI Vibe Coding Assignment · 纯原生前端开发 (HTML5 / CSS3 / Vanilla JS)<br>
+            无需任何构建工具或付费API，直接浏览器打开即可流畅运行。
+          </p>
+        </div>
+      </div>
+
+      <!-- Changeable Info Disclaimer Notice -->
+      <div class="footer-disclaimer-box">
+        <strong>⚠️ 官方验证提醒 / 공식 정보 확인 안내:</strong><br>
+        本指南中所述之门票价格、景点开放时间、交通首末班车及演出安排随时可能依官方政策或天气状况调整，实际出行前请务必通过各景点官方公众号或现场最新公告进行最终确认。<br>
+        <span style="color:#A0A2A8; font-size:0.95em;">본 가이드에 수록된 입장권 요금, 운영 시간, 대중교통 배차 및 공연 일정은 현지 사정에 따라 변경될 수 있으므로 방문 전 공식 채널의 최신 공지를 확인하시기 바랍니다.</span>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 SHANGHAI GUIDE. Open Source Software University Project. Designed with Urban Editorial Aesthetics.
+        </div>
+        <button id="backToTopBtn" class="back-to-top-btn" aria-label="返回顶部 / 맨 위로">
+          <span>返回顶部 / 맨 위로</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
